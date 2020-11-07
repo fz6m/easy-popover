@@ -62,24 +62,41 @@
 
 原生模式可用参数：
 
-参数|类型|必须性|说明
+参数|类型|必须|说明
 :-:|:-:|:-:|:-
 `select`|string|yes|触发弹出块的按键节点选择器
-`popSelect`|string|no|弹出块节点选择器，若不填默认为 `select` 下一个节点
+`popSelect`|string|no|弹出块节点选择器，若不填默认为 `select` 同级下一个节点
 `callback`|object|no|生命周期钩子
 
 #### mode: "create"
 
 即时创建模式可用参数：
 
-参数|类型|必须性|说明
+参数|类型|必须|说明
 :-:|:-:|:-:|:-
 `select`|string|yes|触发弹出块的按键节点选择器
-`mode`|string|yes|当使用即时创建模式时，需使用 `create`
+`mode`|string|yes|当使用即时创建模式时，需使用 `mode: "create"`
 `popHtml`|string|yes|即时创建的弹出块 HTML 文本
 `selectParent`|string|no|触发弹出块的父节点选择器，若不填默认为 `select` 直属父节点
 `callback`|object|no|生命周期钩子
 `instantly`|boolean|no|弹出块是否每次隐藏时销毁，默认为 `true` 隐藏即销毁，若置为 `false` 则只有第一次创建弹出块
+
+#### 生命周期
+
+你可以传入 `callback` 在适当的时机对弹出块挂载点击事件等处理逻辑：
+
+```js
+  callback: {
+    // 弹出块展示前
+    popShowBefore: () => { console.log('show before') },
+    // 弹出块展示后
+    popShow: () => { console.log('show') },
+    // 弹出块隐藏后
+    popHide: (e: MouseEvent) => { console.log('hide: ', e) }
+  }
+```
+
+弹出块处于展示状态时，点击了弹出块以外的任意区域均会导致弹出块关闭，从而触发 `popHide` 生命周期钩子，并传入鼠标点击事件参数。
 
 ### 其他
 
