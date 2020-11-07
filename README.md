@@ -48,7 +48,6 @@
 
     var option = {
         select: '.button',
-        selectParent: '.parent',
         mode: 'create',
         popHtml: '<div class="pop">弹出块内容</div>'
       }
