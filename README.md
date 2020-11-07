@@ -58,7 +58,7 @@
 
 ### 选项
 
-#### mode: default
+#### mode: "default"
 
 原生模式可用参数：
 
@@ -68,7 +68,7 @@
 `popSelect`|string|no|弹出块节点选择器，若不填默认为 `select` 下一个节点
 `callback`|object|no|生命周期钩子
 
-#### mode: create
+#### mode: "create"
 
 即时创建模式可用参数：
 
