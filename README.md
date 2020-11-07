@@ -4,7 +4,7 @@
 
 ### 使用
 
-##### 引入
+#### 引入
 
 ```html
 <head>
@@ -13,53 +13,53 @@
 </head>
 ```
 
-##### 使用
+#### 使用
 
  * 原生使用 ( 已有 pop 弹出块节点 )
 
-    ```html
-      <div class="parent">
+```html
+  <div class="parent">
 
-        <div class="button">点我打开弹出块</div>
-        <div class="pop">弹出块内容</div>
+    <div class="button">点我打开弹出块</div>
+    <div class="pop">弹出块内容</div>
 
-      </div>
+  </div>
 
-      <script>
+  <script>
 
-        var option = {
-            select: '.button'
-          }
-        EasyPopover.init(option)
+    var option = {
+        select: '.button'
+      }
+    EasyPopover.init(option)
 
-      </script>
-    ```
+  </script>
+```
 
  * 即时创建 ( 无 pop 弹出块节点 )
 
-    ```html
-      <div class="parent">
+```html
+  <div class="parent">
 
-          <div class="button">点我打开弹出块</div>
+      <div class="button">点我打开弹出块</div>
 
-      </div>
+  </div>
 
-      <script>
+  <script>
 
-        var option = {
-            select: '.button',
-            selectParent: '.parent',
-            mode: 'create',
-            popHtml: '<div class="pop">弹出块内容</div>'
-          }
-        EasyPopover.init(option)
+    var option = {
+        select: '.button',
+        selectParent: '.parent',
+        mode: 'create',
+        popHtml: '<div class="pop">弹出块内容</div>'
+      }
+    EasyPopover.init(option)
 
-      </script>
-    ```
+  </script>
+```
 
 ### 选项
 
-##### mode: default
+#### mode: default
 
 原生模式可用参数：
 
@@ -69,7 +69,7 @@
 `popSelect`|string|no|弹出块节点选择器，若不填默认为 `select` 下一个节点
 `callback`|object|no|生命周期钩子
 
-##### mode: create
+#### mode: create
 
 即时创建模式可用参数：
 
