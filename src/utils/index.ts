@@ -1,7 +1,10 @@
 /**
  * 选择器
  */
-export const selection = (select: string): Element => {
+export const selection = (select: string | Element): Element => {
+  if (select instanceof Element) {
+    return select
+  }
   const element = document.querySelector(select)
   if (!element) {
     throw new Error('select 不能为空')

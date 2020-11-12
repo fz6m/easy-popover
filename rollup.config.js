@@ -43,6 +43,14 @@ const out = [
       .split('-')
       .map((i) => upperFirst(i))
       .join('')
+  },
+  {
+    file: pkg.browser.replace('umd.', ''),
+    format: 'umd',
+    name: filename
+      .split('-')
+      .map((i) => upperFirst(i))
+      .join('')
   }
 ]
 

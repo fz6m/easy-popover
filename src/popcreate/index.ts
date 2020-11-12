@@ -3,9 +3,9 @@ import { Mode, Callback } from '../types'
 import ClickEvent from '../event'
 
 export type PopOtions = {
-  select: string
-  selectParent?: string
-  popSelect?: string
+  select: string | Element
+  selectParent?: string | Element
+  popSelect?: string | Element
   callback?: Callback
   mode?: Mode
   popHtml?: string
@@ -24,6 +24,7 @@ class PopCreate {
     this.callback = options.callback
 
     this.node = selection(options.select)
+
     this.popNode = options.popSelect
       ? selection(options.popSelect)
       : this.node.nextElementSibling
