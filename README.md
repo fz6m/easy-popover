@@ -11,7 +11,7 @@
 ```html
 <head>
   <!-- ... -->
-  <script src="https://cdn.jsdelivr.net/gh/fz6m/easy-popover@1.0/dist/easy-popover.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fz6m/easy-popover@1.1/dist/easy-popover.min.js"></script>
 </head>
 ```
 
