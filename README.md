@@ -66,8 +66,8 @@
 
 参数|类型|必须|说明
 :-:|:-:|:-:|:-
-`select`|string **\|** element|yes|触发弹出块的按键节点选择器
-`popSelect`|string **\|** element|no|弹出块节点选择器，若不填默认为 `select` 同级下一个节点
+`select`|string **\|** element|yes|触发弹出块的按键节点选择器或节点
+`popSelect`|string **\|** element|no|弹出块节点选择器或节点，若不填默认为 `select` 同级下一个节点
 `callback`|object|no|生命周期钩子
 
 #### mode: "create"
@@ -76,10 +76,10 @@
 
 参数|类型|必须|说明
 :-:|:-:|:-:|:-
-`select`|string **\|** element|yes|触发弹出块的按键节点选择器
+`select`|string **\|** element|yes|触发弹出块的按键节点选择器或节点
 `mode`|string|yes|当使用即时创建模式时，需使用 `mode: "create"`
 `popHtml`|string|yes|即时创建的弹出块 HTML 文本
-`selectParent`|string **\|** element|no|触发弹出块的父节点选择器，若不填默认为 `select` 直属父节点
+`selectParent`|string **\|** element|no|触发弹出块的父节点选择器或节点，若不填默认为 `select` 直属父节点
 `callback`|object|no|生命周期钩子
 `instantly`|boolean|no|弹出块是否每次隐藏时销毁，默认为 `true` 隐藏即销毁，若置为 `false` 则只有第一次创建弹出块
 
